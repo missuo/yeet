@@ -2,7 +2,7 @@
 
 A Claude Code skill that automatically generates conventional commit messages, bootstraps a GitHub repo with `gh` when needed, and handles the full git workflow from staging to push.
 
-> Formerly `ship`. Claude Code now ships a built-in `/ship`, so this skill was renamed to `yeet` to avoid the conflict. See [Migrating from ship](#migrating-from-ship).
+> **Renamed from `ship`.** This skill was originally called `ship` and invoked as `/ship`. Claude Code later added its own built-in `/ship` command, which conflicts with it, so the skill is now called `yeet` and invoked as `/yeet`. Nothing else changed. See [Migrating from ship](#migrating-from-ship).
 
 ## Installation
 
@@ -46,13 +46,13 @@ cp skills/yeet/SKILL.md ~/.claude/skills/yeet/
 
 ### Migrating from ship
 
-If you installed the old `ship` skill by cloning into `~/.claude/skills/ship`, remove it so it no longer shadows (or is shadowed by) the built-in `/ship`, then install `yeet` with one of the methods above:
+The old `ship` skill and Claude Code's built-in `/ship` share the same name, so with the old skill installed, `/ship` may run either one. If you installed the old skill by cloning into `~/.claude/skills/ship`, remove it, then install `yeet` with one of the methods above:
 
 ```bash
 rm -rf ~/.claude/skills/ship
 ```
 
-If any `CLAUDE.md` tells Claude to use the `ship` skill, change it to `yeet`.
+If any `CLAUDE.md`, `AGENTS.md` or project skill tells Claude to use the `/ship` skill, change it to `/yeet`. Otherwise Claude will run the built-in `/ship`, which does something different.
 
 ## Usage
 
@@ -61,6 +61,8 @@ In Claude Code, invoke the skill:
 ```
 /yeet
 ```
+
+Installed as a plugin, its full name is `/yeet:yeet` (Claude Code prefixes plugin skills with the plugin name, and the `/` menu shows that form). Plain `/yeet` runs it as well.
 
 Or ask Claude directly:
 
