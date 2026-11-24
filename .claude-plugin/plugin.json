@@ -1,0 +1,13 @@
+{
+  "name": "yeet",
+  "version": "1.2.0",
+  "description": "Generate Conventional Commits messages, bootstrap a GitHub repo with gh when needed, and stage, commit, and push in one step.",
+  "author": {
+    "name": "Vincent Young",
+    "url": "https://github.com/missuo"
+  },
+  "homepage": "https://github.com/missuo/ship",
+  "repository": "https://github.com/missuo/ship",
+  "license": "MIT",
+  "keywords": ["git", "commit", "conventional-commits", "push", "github"]
+}

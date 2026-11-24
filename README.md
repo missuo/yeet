@@ -1,45 +1,65 @@
-# Ship
+# Yeet
 
 A Claude Code skill that automatically generates conventional commit messages, bootstraps a GitHub repo with `gh` when needed, and handles the full git workflow from staging to push.
 
+> Formerly `ship`. Claude Code now ships a built-in `/ship`, so this skill was renamed to `yeet` to avoid the conflict. See [Migrating from ship](#migrating-from-ship).
+
 ## Installation
 
-### Using skills CLI (recommended)
+### Plugin marketplace (recommended)
+
+In Claude Code:
+
+```
+/plugin marketplace add missuo/ship
+/plugin install yeet@missuo
+```
+
+Or from your shell:
+
+```bash
+claude plugin marketplace add missuo/ship
+claude plugin install yeet@missuo
+```
+
+#### Update
+
+```bash
+claude plugin marketplace update missuo
+claude plugin update yeet@missuo
+```
+
+### Using skills CLI
 
 ```bash
 npx skills add missuo/ship
 ```
 
-### Clone directly into Claude Code skills directory
-
-```bash
-mkdir -p ~/.claude/skills
-git clone https://github.com/missuo/ship.git ~/.claude/skills/ship
-```
-
-#### Update
-
-If you installed via git clone, update with:
-
-```bash
-cd ~/.claude/skills/ship && git pull
-```
-
-### Manual install/update (only the skill file)
+### Manual install (only the skill file)
 
 If you already have this repo cloned, copy the skill file into Claude Code's skills directory:
 
 ```bash
-mkdir -p ~/.claude/skills/ship
-cp SKILL.md ~/.claude/skills/ship/
+mkdir -p ~/.claude/skills/yeet
+cp skills/yeet/SKILL.md ~/.claude/skills/yeet/
 ```
+
+### Migrating from ship
+
+If you installed the old `ship` skill by cloning into `~/.claude/skills/ship`, remove it so it no longer shadows (or is shadowed by) the built-in `/ship`, then install `yeet` with one of the methods above:
+
+```bash
+rm -rf ~/.claude/skills/ship
+```
+
+If any `CLAUDE.md` tells Claude to use the `ship` skill, change it to `yeet`.
 
 ## Usage
 
 In Claude Code, invoke the skill:
 
 ```
-/ship
+/yeet
 ```
 
 Or ask Claude directly:
@@ -154,7 +174,7 @@ src/auth/logout.ts (new file)
 **Command:**
 
 ```
-/ship
+/yeet
 ```
 
 **Result:**
@@ -198,7 +218,7 @@ README.md (modified)
 **Command:**
 
 ```
-/ship
+/yeet
 ```
 
 **Result:**
@@ -242,6 +262,7 @@ git push
 
 ## Version History
 
+- **1.2.0** - Rename to `yeet` and package as a Claude Code plugin marketplace
 - **1.1.0** - Add git/GitHub repository bootstrap with interactive visibility selection
 - **1.0.0** - Initial release with automatic commit type detection
 

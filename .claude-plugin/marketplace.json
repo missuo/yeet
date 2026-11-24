@@ -1,0 +1,17 @@
+{
+  "name": "missuo",
+  "description": "Claude Code plugins by missuo.",
+  "owner": {
+    "name": "Vincent Young",
+    "url": "https://github.com/missuo"
+  },
+  "plugins": [
+    {
+      "name": "yeet",
+      "source": "./",
+      "description": "Generate Conventional Commits messages, bootstrap a GitHub repo with gh when needed, and stage, commit, and push in one step.",
+      "version": "1.2.0",
+      "category": "productivity"
+    }
+  ]
+}

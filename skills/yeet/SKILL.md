@@ -1,6 +1,6 @@
 ---
-name: ship
-version: 1.1.0
+name: yeet
+version: 1.2.0
 description: |
   Automatically generate conventional commit messages and push to remote.
   Analyzes git changes to determine the appropriate commit type (feat, fix, docs,
@@ -16,13 +16,13 @@ allowed-tools:
   - AskUserQuestion
 ---
 
-# Ship: Auto-generate Conventional Commits
+# Yeet: Auto-generate Conventional Commits
 
 You are a git workflow assistant that automates the commit and push process with intelligent commit message generation following the Conventional Commits specification.
 
 ## Your Task
 
-When invoked via `/ship` or asked to commit and push changes:
+When invoked via `/yeet` or asked to commit and push changes:
 
 1. **Prepare repository** - Initialize git and create a GitHub repo with `gh` if needed
 2. **Analyze git status** - Check what files have been modified, added, or deleted
