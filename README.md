@@ -11,14 +11,14 @@ A Claude Code skill that automatically generates conventional commit messages, b
 In Claude Code:
 
 ```
-/plugin marketplace add missuo/ship
+/plugin marketplace add missuo/yeet
 /plugin install yeet@missuo
 ```
 
 Or from your shell:
 
 ```bash
-claude plugin marketplace add missuo/ship
+claude plugin marketplace add missuo/yeet
 claude plugin install yeet@missuo
 ```
 
@@ -32,7 +32,7 @@ claude plugin update yeet@missuo
 ### Using skills CLI
 
 ```bash
-npx skills add missuo/ship
+npx skills add missuo/yeet
 ```
 
 ### Manual install (only the skill file)
